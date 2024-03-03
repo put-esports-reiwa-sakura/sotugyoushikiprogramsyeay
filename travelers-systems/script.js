@@ -45,6 +45,7 @@ document.querySelectorAll('.vertical-slider').forEach(function(slider, index) {
 
   function handleMouseMoveOrTouchMove(e) {
     if (!isDragging) return;
+    e.preventDefault(); // Prevent scrolling on touch devices
     if (e.type === 'mousemove') {
       updateValue(e.clientY);
     } else if (e.type === 'touchmove') {
@@ -67,7 +68,6 @@ document.querySelectorAll('.vertical-slider').forEach(function(slider, index) {
     audio.volume = value / 100;
   }
 });
-
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
