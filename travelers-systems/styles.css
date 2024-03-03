@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.content-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* スライダー間の間隔を調整 */
+}
+
+.vertical-slider {
+  height: 300px;
+  margin: 0 20px; /* 左右の余白を調整 */
+  position: relative;
+  touch-action: none;
+}
+
+
+.slider-bar {
+  width: 40px; /* 幅を広げる */
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.slider-knob {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
